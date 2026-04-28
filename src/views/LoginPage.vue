@@ -28,6 +28,7 @@
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonInput, IonButton } from '@ionic/vue';
+import { usuarioLogado } from '../composables/userStore';
 
 const email = ref('');
 const senha = ref('');
@@ -38,12 +39,20 @@ const formValido = computed(() => {
 });
 
 const entrar = () => {
-  // Simula login – sem validação real
-  if (formValido.value) {
-    router.push('/home');
-  } else {
-    alert('Preencha e-mail válido e senha com 4+ caracteres');
+  if (!formValido.value) {
+    alert('E-mail válido e senha com 4+ caracteres');
+    return;
   }
+  
+  // Verifica se o e-mail digitado é o mesmo do cadastro
+  if (email.value !== usuarioLogado.value.email) {
+    alert('E-mail não cadastrado. Faça o cadastro primeiro.');
+    router.push('/register');
+    return;
+  }
+  
+  // Login OK
+  router.push('/home');
 };
 
 const irParaCadastro = () => router.push('/register');

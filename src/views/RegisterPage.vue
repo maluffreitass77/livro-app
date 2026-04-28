@@ -34,6 +34,7 @@
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonInput, IonButton } from '@ionic/vue';
+import { setUsuario } from '../composables/userStore';
 
 const nome = ref('');
 const email = ref('');
@@ -50,7 +51,9 @@ const cadastroValido = computed(() => {
 
 const cadastrar = () => {
   if (cadastroValido.value) {
-    alert('Cadastro simulado com sucesso! Faça login.');
+    // Armazena o nome e email para usar no login
+    setUsuario(nome.value, email.value);
+    alert(`Cadastro simulado com sucesso! Faça login.`);
     router.push('/login');
   } else {
     alert('Verifique os dados (senhas devem coincidir, e-mail válido, nome não vazio)');
