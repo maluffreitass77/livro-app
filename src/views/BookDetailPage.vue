@@ -17,9 +17,10 @@
             <ion-card-title>{{ livro.title }}</ion-card-title>
             <ion-card-subtitle>{{ livro.author }}</ion-card-subtitle>
           </ion-card-header>
-          <ion-card-content>
-            <p>{{ livro.description }}</p>
-          </ion-card-content>
+        <ion-card-content>
+  <h3 style="color: #4a2c1a; margin-bottom: 8px;">📖 Sinopse</h3>
+  <p style="line-height: 1.5; text-align: justify;">{{ livro.description }}</p>
+</ion-card-content>
         </ion-card>
       </div>
       <div v-else>

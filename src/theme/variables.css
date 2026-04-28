@@ -1,52 +1,54 @@
-/* Estilos personalizados */
+/* Tema literário */
 :root {
-  --ion-background-color: #f8f9fa;
-  --ion-toolbar-background: #4a6fa5;
-  --ion-toolbar-color: #ffffff;
-  --ion-button-background: #4a6fa5;
-  --ion-button-color: #ffffff;
+  --ion-background-color: #f4ede5;
+  --ion-toolbar-background: #3e2a1f;
+  --ion-toolbar-color: #f9e5c8;
+  --ion-button-background: #5c3b2a;
+  --ion-button-color: #fff3e6;
+  --ion-card-background: #fffaf3;
 }
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #d9c7b0;
 }
 
 ion-content {
-  --background: linear-gradient(135deg, #667eea20, #764ba220);
+  --background: url('https://www.transparenttextures.com/patterns/aged-paper.png'), linear-gradient(135deg, #f9efdf, #e6d5b8);
+  --background-size: cover;
 }
 
 ion-card {
-  --background: rgba(255, 255, 255, 0.95);
-  border-radius: 16px;
+  background: #fff9ef;
+  border-radius: 20px;
   margin: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+ion-card:hover {
+  transform: scale(1.02);
 }
 
-ion-item {
-  --background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  margin-bottom: 16px;
-  --padding-start: 16px;
-  --inner-padding-end: 16px;
+ion-card-title {
+  color: #4a2c1a;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+ion-card-subtitle {
+  color: #7a5a48;
+  font-style: italic;
 }
 
 ion-button {
-  --border-radius: 28px;
-  font-weight: bold;
-  margin-top: 8px;
-  --box-shadow: none;
+  --border-radius: 30px;
+  font-weight: 600;
 }
 
 .welcome-message {
+  background: rgba(62, 42, 31, 0.85);
+  color: #fef0db;
+  border-radius: 40px;
+  padding: 12px 20px;
   text-align: center;
-  margin: 20px 0;
-  padding: 16px;
-  background: rgba(255,255,255,0.8);
-  border-radius: 24px;
+  margin: 16px;
 }
-
-.welcome-message h2 {
-  color: #4a6fa5;
-  margin-bottom: 4px;
-}/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
