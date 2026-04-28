@@ -1,6 +1,6 @@
 # App de Livros Favoritos - Ionic + Vue.js 3
 
-**Nome completo do aluno:** <SEU NOME>
+**Nome completo do aluno:** Maria Luiza de Freitas
 
 ## Descrição do projeto
 
@@ -14,7 +14,7 @@ Os dados são estáticos (mockados) – não há banco de dados nem API.
 2. **Cadastro** – nome, e-mail, senha, confirmar senha, botão Cadastrar.
 3. **Recuperação de senha** – campo e-mail, botão Recuperar Senha.
 4. **Home** – lista de livros com título e autor. Ao clicar, navega para a tela de detalhes.
-5. **Detalhes do livro** – exibe título, autor, descrição e imagem (mockada).
+5. **Detalhes do livro** – exibe título, autor e descrição 
 
 ## Como rodar o projeto
 
