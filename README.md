@@ -1,6 +1,6 @@
 # App de Livros Favoritos - Ionic + Vue.js 3
 
-**Nome completo do aluno:** <SEU NOME>
+**Nome completo do aluno:** <Maria Luiza de Freitas>
 
 ## Descrição do projeto
 
